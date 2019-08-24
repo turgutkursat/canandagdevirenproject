@@ -1,11 +1,11 @@
 <?php $this->load->view("$this->view/header") ?>
-<form action="<?= base_url("sss/add") ?>" method="post">
+<form action="<?= base_url("$this->url/update/".$sss->id) ?>" method="post">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>S.S.S. Ekle</h1>
+                    <h1>S.S.S. Düzenle</h1>
                 </div>
                 <div class="col-sm-6">
                     <button type="submit" name="submit" value="1" class="btn btn-outline-success float-right"><i
@@ -40,7 +40,7 @@
                         <label>Başlık</label>
                         <div class="input-group">
                             <input type="text"
-                                   class="form-control <?= form_error("companyName") ? "is-invalid" : null ?>"
+                                   class="form-control <?= form_error("companyName") ? "is-invalid" : null ?>" value="<?=$sss->title?>"
                                    name="title" minlength="10" required>
                         </div>
                         <!-- /.input group -->
@@ -50,7 +50,7 @@
                         <label>Açıklama</label>
                         <div class="input-group">
                             <textarea class="form-control <?= form_error("companyName") ? "is-invalid" : null ?>" rows="5"
-                                      name="message" minlength="10" required></textarea>
+                                      name="message" minlength="10" required><?=$sss->message?></textarea>
                         </div>
                         <!-- /.input group -->
                     </div>

@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Sliders</h1>
+                    <h1>Sık Sorulan Sorular</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -25,43 +25,33 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <a href="<?= base_url("slides/add") ?>" class="btn btn-outline-success float-right"><i
+                            <a href="<?= base_url("sss/add") ?>" class="btn btn-outline-success float-right"><i
                                         class="fa fa-plus mr-2"></i>Yeni
                                 Ekle</a>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <?php if (!empty($slides)): ?>
+                            <?php if (!empty($datas)): ?>
                             <table class="table table-bordered">
                                 <thead>
                                 <tr>
                                     <th style="width: 10px" class="text-center">#</th>
-                                    <th style="width: 10px">Durum</th>
                                     <th class="text-center">Başlık</th>
-                                    <th class="text-center">Resim</th>
                                     <th style="width: 200px;" class="text-center">İşlemler</th>
                                 </tr>
                                 </thead>
                                 <tbody>
 
-                                <?php foreach ($slides as $slide): ?>
+                                <?php foreach ($datas as $data): ?>
                                     <tr>
-                                        <td><?= $slide->id ?></td>
-                                        <td>
-                                            <?= $slide->isActive == "true" ? "Aktif" : "Pasif" ?>
-                                        </td>
-                                        <td class="text-center"><?= $slide->title ?></td>
+                                        <td><?= $data->id ?></td>
+                                        <td class="text-center"><?= $data->title ?></td>
                                         <td class="text-center">
-                                            <img width="200" height="100"
-                                                 src="http://awsassets.wwftr.panda.org/img/tehdit_doga_ankara_1914.jpg"
-                                                 alt="Resim">
-                                        </td>
-                                        <td class="text-center">
-                                            <a href="<?= base_url("slides/delete/$slide->id") ?>"
+                                            <a href="<?= base_url("sss/delete/$data->id") ?>"
                                                class="btn btn-outline-danger"><i
                                                         class="fa fa-trash-alt mr-2"></i>Sil
                                             </a>
-                                            <a href="<?= base_url("slides/update/$slide->id") ?>"
+                                            <a href="<?= base_url("sss/update/$data->id") ?>"
                                                class="btn btn-outline-primary"><i class="fa fa-edit mr-2"></i>Düzenle
                                             </a>
                                         </td>

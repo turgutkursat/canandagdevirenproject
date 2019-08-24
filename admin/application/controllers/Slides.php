@@ -161,9 +161,7 @@ class Slides extends CI_Controller
                 }
             }
         }
-
         $this->load->view("$this->view/update_v", $resulData);
-
     }
 
     public function delete()
@@ -181,4 +179,5 @@ class Slides extends CI_Controller
         redirect(base_url("slides"));
 
     }
+
 }

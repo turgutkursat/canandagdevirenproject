@@ -1,11 +1,11 @@
 <?php $this->load->view("$this->view/header") ?>
-<form action="<?= base_url("Settings") ?>" method="post">
+<form action="<?= base_url("sss/update/".$sss->id) ?>" method="post">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Güncelle</h1>
+                    <h1>S.S.S. Düzenle</h1>
                 </div>
                 <div class="col-sm-6">
                     <button type="submit" name="submit" value="1" class="btn btn-outline-success float-right"><i
@@ -13,9 +13,7 @@
                     </button>
                 </div>
             </div>
-
         </div><!-- /.container-fluid -->
-
     </section>
 
     <!-- Main content -->
@@ -28,7 +26,7 @@
             <!-- SEO -->
             <div class="card card-default ">
                 <div class="card-header">
-                    <h3 class="card-title">Slider Ekle</h3>
+                    <h3 class="card-title">Tüm alanları doldurunuz.</h3>
 
                     <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i>
@@ -38,27 +36,30 @@
                 <!-- /.card-header -->
                 <div class="card-body">
 
-
                     <div class="form-group">
-                        <label>Title</label>
-
+                        <label>Başlık</label>
                         <div class="input-group">
-
                             <input type="text"
-                                   class="form-control <?= form_error("companyName") ? "is-invalid" : null ?>"
-                                   name="title">
+                                   class="form-control <?= form_error("companyName") ? "is-invalid" : null ?>" value="<?=$sss->title?>"
+                                   name="title" minlength="10" required>
                         </div>
                         <!-- /.input group -->
                     </div>
 
+                    <div class="form-group">
+                        <label>Açıklama</label>
+                        <div class="input-group">
+                            <textarea class="form-control <?= form_error("companyName") ? "is-invalid" : null ?>" rows="5"
+                                      name="message" minlength="10" required><?=$sss->message?></textarea>
+                        </div>
+                        <!-- /.input group -->
+                    </div>
 
                 </div>
                 <!-- /.card-body -->
             </div>
             <!-- /.card -->
-
         </div><!-- /.container-fluid -->
-
     </section>
     <!-- /.content -->
 </form>

@@ -45,15 +45,15 @@
 
                             <input type="text"
                                    class="form-control <?= form_error("title") ? "is-invalid" : null ?>" value="<?=set_value("title")?>"
-                                   name="title">
+                                   name="title" required>
                         </div>
                         <!-- /.input group -->
                     </div>
 
                     <div class="input-group mb-3">
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" name="image">
-                            <label class="custom-file-label">Resim Seç</label>
+                            <input type="file" class="custom-file-input" required name="image">
+                            <label class="custom-file-label" >Resim Seç</label>
                         </div>
                     </div>
 
