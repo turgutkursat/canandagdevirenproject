@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Sık Sorulan Sorular</h1>
+                    <h1>Mesajlar</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="<?= base_url() ?>">Anasayfa</a></li>
-                        <li class="breadcrumb-item active">Sık Sorulan Sorular</li>
+                        <li class="breadcrumb-item active">Mesajlar</li>
                     </ol>
                 </div>
             </div>
@@ -25,9 +25,7 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <a href="<?= base_url("sss/add") ?>" class="btn btn-outline-success float-right"><i
-                                        class="fa fa-plus mr-2"></i>Yeni
-                                Ekle</a>
+                            <h3>Tüm Mesajlar</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -37,6 +35,8 @@
                                 <tr>
                                     <th style="width: 10px" class="text-center">#</th>
                                     <th class="text-center">Başlık</th>
+                                    <th class="text-center">Ad ve Soyad / E-mail</th>
+                                    <th class="text-center">Durum</th>
                                     <th style="width: 200px;" class="text-center">İşlemler</th>
                                 </tr>
                                 </thead>
@@ -46,13 +46,15 @@
                                     <tr>
                                         <td><?= $data->id ?></td>
                                         <td class="text-center"><?= $data->title ?></td>
+                                        <td class="text-center"><?= $data->fullName . " / " . "<a href='mailto:$data->email'>$data->email</a>" ?></td>
+                                        <td class="text-center"><?= $data->isRead == "0" ? "<i class='fa fa-eye-slash mr-lg-2'>Okunmadı</i>" : "<i class='fa fa-eye mr-lg-2'>Okundu</i>" ?></td>
                                         <td class="text-center">
-                                            <a href="<?= base_url("sss/delete/$data->id") ?>"
+                                            <a href="<?= base_url("$this->url/delete/$data->id") ?>"
                                                class="btn btn-outline-danger"><i
                                                         class="fa fa-trash-alt mr-2"></i>Sil
                                             </a>
-                                            <a href="<?= base_url("sss/update/$data->id") ?>"
-                                               class="btn btn-outline-primary"><i class="fa fa-edit mr-2"></i>Düzenle
+                                            <a href="<?= base_url("$this->url/read/$data->id") ?>"
+                                               class="btn btn-outline-primary"><i class="fa fa-eye mr-2"></i>Oku
                                             </a>
                                         </td>
                                     </tr>

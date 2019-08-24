@@ -163,15 +163,6 @@
                         </a
 
                     </li>
-                    <li class="nav-item">
-                        <a href="<?= base_url("rooms") ?>" class="nav-link">
-                            <i class="nav-icon fas fa-house-damage"></i>
-                            <p>
-                                Oda
-                            </p>
-                        </a
-
-                    </li>
 
                     <li class="nav-item">
                         <a href="<?= base_url("Settings") ?>" class="nav-link">

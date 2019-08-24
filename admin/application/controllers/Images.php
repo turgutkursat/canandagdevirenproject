@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('Doğrudan komut dosyasına erişime izin verilmiyor');
 
-class images extends CI_Controller
+class Images extends CI_Controller
 {
     public $view = "images_v";
     public $url = "images";
