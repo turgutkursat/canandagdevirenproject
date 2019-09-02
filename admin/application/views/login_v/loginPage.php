@@ -9,7 +9,8 @@
 
     <?php $this->load->view("$this->doLogin/style") ?>
 </head>
-<body class="hold-transition register-page" style="background-image: url('https://picsum.photos/id/966/1920/1080?blur');">
+<body class="hold-transition register-page"
+      style="background-image: url('https://picsum.photos/id/966/1920/1080?blur');">
 <div class="login-box">
     <div class="login-logo text-dark">
         <b>EntrBit Software</b> Admin
@@ -30,7 +31,9 @@
                 <div class="input-group mb-3">
                     <input type="email"
                            class="form-control <?php if (form_error("email")): ?>is-invalid <?php endif; ?>"
-                           placeholder="E-mail" value="<?= set_value("email")?set_value("email"):"admin@admin.com" ?>" name="email" required>
+                           placeholder="E-mail"
+                           value="<?= set_value("email") ? set_value("email") : "admin@canandagdevirenogrenciyurdu.com.tr" ?>"
+                           name="email" required>
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-envelope"></span>
@@ -41,7 +44,7 @@
                 <div class="input-group mb-3">
                     <input type="password" name="password"
                            class="form-control <?php if (form_error("password")): ?>is-invalid <?php endif; ?>" required
-                           placeholder="Şifre" value="demoadmin">
+                           placeholder="Şifre" value="admin123">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-lock"></span>

@@ -17,7 +17,7 @@ class message_model extends CI_Model
     }
 
     /** Tüm Kayıtları bana getirecek olan metot.. */
-    public function get_all($where = array(), $order = "id ASC")
+    public function get_all($where = array(), $order = "id DESC")
     {
         return $this->db->where($where)->order_by($order)->get($this->tableName)->result();
     }

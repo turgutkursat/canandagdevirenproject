@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('Doğrudan komut dosyasına erişime izin verilmiyor
 class Home extends CI_Controller
 {
     public $view = "index_v";
+
     public function __construct()
     {
         parent::__construct();
@@ -15,7 +16,10 @@ class Home extends CI_Controller
 
     public function index()
     {
-        $this->load->view("$this->view/index_v");
+        $image = $this->db->count_all("images");
+        $message = $this->db->from("message")->like("isRead" ,"0")->count_all_results();
+        $resulData = array("totalImg" => $image,"messageCount"=>$message);
+        $this->load->view("$this->view/index_v", $resulData);
     }
 
 }

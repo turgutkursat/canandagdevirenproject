@@ -135,6 +135,16 @@
                     </li>
 
                     <li class="nav-item">
+                        <a href="<?= base_url("Company") ?>" class="nav-link">
+                            <i class="nav-icon fas fa-building"></i>
+                            <p>
+                                Kurumsal
+                            </p>
+                        </a
+
+                    </li>
+
+                    <li class="nav-item">
                         <a href="<?= base_url("images") ?>" class="nav-link">
                             <i class="nav-icon fas fa-images"></i>
                             <p>
