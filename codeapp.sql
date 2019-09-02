@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `message` (
 
 INSERT INTO `message` (`id`, `title`, `fullName`, `email`, `phone`, `content`, `isRead`, `date`) VALUES
 (5, 'asddasdasdasdasd', 'adadsökjkhk', 'asdasd@gmail.com', '123123', 'asdasdasdasdadsasda', 0, '2019-08-25 13:41:20'),
-(6, 'denmeasdads', 'asdasdasdasd', 'jackpwilliam@gmail.com', '54444444444444444444444444444', 'akldsjlkadsjlkasdjlkasd', 0, '2019-08-28 20:13:28');
+(6, 'denmeasdads', 'asdasdasdasd', 'admin@admin.com', '54444444444444444444444444444', 'akldsjlkadsjlkasdjlkasd', 0, '2019-08-28 20:13:28');
 
 -- --------------------------------------------------------
 
@@ -130,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
 --
 
 INSERT INTO `settings` (`id`, `logo`, `whatsapp`, `description`, `keywords`, `copyright`, `author`, `facebook`, `instagram`, `phone`, `companyName`, `adress`, `about`, `email`, `youtube`, `twitter`, `date`) VALUES
-(5, NULL, '(544) 942-1274', 'CANAN DAĞDEVİREN KIZ ÖĞRENCİ YURDU', 'CANAN DAĞDEVİREN KIZ ÖĞRENCİ YURDU', 'CANAN DAĞDEVİREN KIZ ÖĞRENCİ YURDU', 'CANAN DAĞDEVİREN KIZ ÖĞRENCİ YURDU', 'asdasd', NULL, '(544) 942-1274', 'CANAN DAĞDEVİREN KIZ ÖĞRENCİ YURDU', 'Üniversite Mh. Jandarma Komando Onbaşı Kadir Demir Sk. No: 7 Avcılar / İSTANBUL ', 'Canan Dağdeviren Kız Öğrenci Yurdu olarak öğrencilerimize otel konforu ev rahatlığında hizmet veriyor ve onların tüm haklarını; ırk, dil, din, renk, siyasi görüş ve aile statüsü gözetmeden, adil ve eşit sahipleniyor ve sıcak bir aile ortamı oluşmasını sağlıyoruz.', 'mail@turgutkursat.org', NULL, NULL, '2019-08-28 20:03:39');
+(5, NULL, '(544) xxx-xxxx', 'CANAN DAĞDEVİREN KIZ ÖĞRENCİ YURDU', 'CANAN DAĞDEVİREN KIZ ÖĞRENCİ YURDU', 'CANAN DAĞDEVİREN KIZ ÖĞRENCİ YURDU', 'CANAN DAĞDEVİREN KIZ ÖĞRENCİ YURDU', 'asdasd', NULL, '(544) xxx-xxxx', 'CANAN DAĞDEVİREN KIZ ÖĞRENCİ YURDU', 'Üniversite Mh. Jandarma Komando Onbaşı Kadir Demir Sk. No: 7 Avcılar / İSTANBUL ', 'Canan Dağdeviren Kız Öğrenci Yurdu olarak öğrencilerimize otel konforu ev rahatlığında hizmet veriyor ve onların tüm haklarını; ırk, dil, din, renk, siyasi görüş ve aile statüsü gözetmeden, adil ve eşit sahipleniyor ve sıcak bir aile ortamı oluşmasını sağlıyoruz.', 'mail@turgutkursat.org', NULL, NULL, '2019-08-28 20:03:39');
 
 -- --------------------------------------------------------
 
